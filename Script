@@ -1034,6 +1034,7 @@ local function ANVYH_fake_script() -- BoundlessGrasp.MainScript
 				end
 				return returnthing
 			elseif commands[v:split(" ")[1]] and not v:match("%^") then
+			    print(v:split(" ")[1])
 				local returnthing = commands[v:split(" ")[1]].scriptie(v:split(" "))
 				return returnthing
 			elseif #v:split("^") >= 3 then
@@ -1695,7 +1696,7 @@ local function ANVYH_fake_script() -- BoundlessGrasp.MainScript
 			extra1 = "if game.PlaceId == ".. game.PlaceId.." then\n"
 			endtra1 = "\nend"
 		end
-		local scriptie = extra1.."local table = {\n\tac('"..title.."', '"..req.."', '"..desc.."', function()\n\t\t"..scripting.."\n\tend,\n\t{'"..table.concat(alias,"', '").."'})\n}\nreturn table"..endtra1
+		local scriptie = extra1.."local table = {\n\tac('"..title.."', '"..req.."', '"..desc.."', function(args)\n\t\t"..scripting.."\n\tend,\n\t{'"..table.concat(alias,"', '").."'})\n}\nreturn table"..endtra1
 		if debugmode then
 			print(scriptie)
 		end
