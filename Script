@@ -46,7 +46,7 @@ local X_2 = Instance.new("TextButton")
 --Properties:
 
 BoundlessGrasp.Name = "BoundlessGrasp"
-BoundlessGrasp.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+BoundlessGrasp.Parent = game.CoreGui
 BoundlessGrasp.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 BoundlessGrasp.ResetOnSpawn = false
 
