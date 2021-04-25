@@ -1,0 +1,1746 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local BoundlessGrasp = Instance.new("ScreenGui")
+local HolderFrame = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local CommandHolder = Instance.new("ScrollingFrame")
+local NewCmd = Instance.new("TextLabel")
+local Storage = Instance.new("Frame")
+local Settings = Instance.new("ImageButton")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local CommandBar = Instance.new("TextBox")
+local SettingsFrame = Instance.new("Frame")
+local SettingsTitle = Instance.new("TextLabel")
+local Exit = Instance.new("TextButton")
+local PrefixButton = Instance.new("TextButton")
+local Prefix = Instance.new("TextLabel")
+local Help = Instance.new("Frame")
+local Title_2 = Instance.new("TextLabel")
+local Desc = Instance.new("TextLabel")
+local UIGradient = Instance.new("UIGradient")
+local Notification = Instance.new("Frame")
+local Title_3 = Instance.new("TextLabel")
+local Desc_2 = Instance.new("TextLabel")
+local UIGradient_2 = Instance.new("UIGradient")
+local Button = Instance.new("TextButton")
+local CustomCommands = Instance.new("Frame")
+local Title_4 = Instance.new("TextLabel")
+local name = Instance.new("TextBox")
+local Req = Instance.new("TextBox")
+local Desc_3 = Instance.new("TextBox")
+local Scripting = Instance.new("TextBox")
+local Add = Instance.new("TextButton")
+local Alias = Instance.new("TextBox")
+local X = Instance.new("TextButton")
+local GameOnly = Instance.new("TextButton")
+local History = Instance.new("Frame")
+local Title_5 = Instance.new("TextLabel")
+local ScrollingFrame_2 = Instance.new("ScrollingFrame")
+local History_2 = Instance.new("TextLabel")
+local X_2 = Instance.new("TextButton")
+
+--Properties:
+
+BoundlessGrasp.Name = "BoundlessGrasp"
+BoundlessGrasp.Parent = game.CoreGui
+BoundlessGrasp.ResetOnSpawn = false
+
+HolderFrame.Name = "HolderFrame"
+HolderFrame.Parent = BoundlessGrasp
+HolderFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+HolderFrame.BorderColor3 = Color3.fromRGB(255, 170, 0)
+HolderFrame.Position = UDim2.new(0.862808526, 0, 0.775223851, 0)
+HolderFrame.Size = UDim2.new(0.137358144, 0, 0.224956289, 0)
+
+Title.Name = "Title"
+Title.Parent = HolderFrame
+Title.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title.BackgroundTransparency = 1.000
+Title.BorderColor3 = Color3.fromRGB(255, 170, 0)
+Title.Size = UDim2.new(0.997547567, 0, 0.0844427571, 0)
+Title.ZIndex = 2
+Title.Font = Enum.Font.Oswald
+Title.Text = "Boundless Grasp"
+Title.TextColor3 = Color3.fromRGB(0, 0, 0)
+Title.TextScaled = true
+Title.TextSize = 11.000
+Title.TextStrokeColor3 = Color3.fromRGB(255, 170, 0)
+Title.TextStrokeTransparency = 0.700
+Title.TextWrapped = true
+
+CommandHolder.Name = "CommandHolder"
+CommandHolder.Parent = HolderFrame
+CommandHolder.Active = true
+CommandHolder.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+CommandHolder.BorderColor3 = Color3.fromRGB(255, 170, 0)
+CommandHolder.BorderSizePixel = 0
+CommandHolder.Position = UDim2.new(0, 0, 0.189870298, 0)
+CommandHolder.Size = UDim2.new(1, 0, 0.810129821, 0)
+CommandHolder.ZIndex = 2
+CommandHolder.BottomImage = "rbxassetid://5903324492"
+CommandHolder.MidImage = "rbxassetid://5903324492"
+CommandHolder.ScrollBarThickness = 6
+CommandHolder.TopImage = "rbxassetid://5903324492"
+
+NewCmd.Name = "NewCmd"
+NewCmd.Parent = CommandHolder
+NewCmd.Active = true
+NewCmd.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+NewCmd.BackgroundTransparency = 0.500
+NewCmd.BorderColor3 = Color3.fromRGB(255, 170, 0)
+NewCmd.BorderSizePixel = 0
+NewCmd.Size = UDim2.new(1, -6, 0, 15)
+NewCmd.Visible = false
+NewCmd.ZIndex = 2
+NewCmd.Font = Enum.Font.SourceSans
+NewCmd.Text = "[1]: Print [String]"
+NewCmd.TextColor3 = Color3.fromRGB(0, 0, 0)
+NewCmd.TextSize = 14.000
+NewCmd.TextStrokeColor3 = Color3.fromRGB(255, 170, 0)
+NewCmd.TextWrapped = true
+NewCmd.TextXAlignment = Enum.TextXAlignment.Left
+
+Storage.Name = "Storage"
+Storage.Parent = HolderFrame
+Storage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Storage.Position = UDim2.new(-1.63999999, 0, 0.921428561, 0)
+Storage.Size = UDim2.new(0, 1, 0, 1)
+Storage.Visible = false
+
+Settings.Name = "Settings"
+Settings.Parent = HolderFrame
+Settings.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Settings.BorderColor3 = Color3.fromRGB(255, 170, 0)
+Settings.Position = UDim2.new(0.911388516, 0, 0.105427414, 0)
+Settings.Size = UDim2.new(0.0867432654, 0, 0.0844427571, 0)
+Settings.AutoButtonColor = false
+Settings.Image = "http://www.roblox.com/asset/?id=484211948"
+
+ScrollingFrame.Parent = HolderFrame
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 0.990
+ScrollingFrame.Position = UDim2.new(0, 0, 0.102537632, 0)
+ScrollingFrame.Size = UDim2.new(0.89200002, 1, 0.0839999989, 1)
+ScrollingFrame.ZIndex = 2
+ScrollingFrame.BottomImage = "rbxassetid://5903324492"
+ScrollingFrame.CanvasSize = UDim2.new(1, 0, 0, 0)
+ScrollingFrame.MidImage = "rbxassetid://5903324492"
+ScrollingFrame.ScrollBarThickness = 1
+ScrollingFrame.TopImage = "rbxassetid://5903324492"
+
+CommandBar.Name = "CommandBar"
+CommandBar.Parent = ScrollingFrame
+CommandBar.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+CommandBar.BorderColor3 = Color3.fromRGB(255, 170, 0)
+CommandBar.Size = UDim2.new(1, 0, 1, -1)
+CommandBar.ZIndex = 2
+CommandBar.Font = Enum.Font.SourceSans
+CommandBar.PlaceholderColor3 = Color3.fromRGB(33, 255, 103)
+CommandBar.PlaceholderText = "Command Here (;)"
+CommandBar.Text = ""
+CommandBar.TextColor3 = Color3.fromRGB(221, 255, 0)
+CommandBar.TextSize = 14.000
+CommandBar.TextXAlignment = Enum.TextXAlignment.Left
+
+SettingsFrame.Name = "SettingsFrame"
+SettingsFrame.Parent = BoundlessGrasp
+SettingsFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SettingsFrame.BorderColor3 = Color3.fromRGB(255, 170, 0)
+SettingsFrame.Position = UDim2.new(0.651063859, 0, 0.306306303, 0)
+SettingsFrame.Size = UDim2.new(0, 125, 0, 140)
+SettingsFrame.Visible = false
+
+SettingsTitle.Name = "SettingsTitle"
+SettingsTitle.Parent = SettingsFrame
+SettingsTitle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SettingsTitle.BorderColor3 = Color3.fromRGB(255, 170, 0)
+SettingsTitle.Size = UDim2.new(0.839999974, 0, 0, 20)
+SettingsTitle.Font = Enum.Font.SourceSans
+SettingsTitle.Text = "Settings"
+SettingsTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+SettingsTitle.TextScaled = true
+SettingsTitle.TextSize = 14.000
+SettingsTitle.TextWrapped = true
+
+Exit.Name = "Exit"
+Exit.Parent = SettingsFrame
+Exit.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Exit.BorderColor3 = Color3.fromRGB(255, 170, 0)
+Exit.Position = UDim2.new(0, 105, 0, 0)
+Exit.Size = UDim2.new(0, 20, 0, 20)
+Exit.ZIndex = 2
+Exit.Font = Enum.Font.SourceSans
+Exit.Text = "X"
+Exit.TextColor3 = Color3.fromRGB(255, 255, 255)
+Exit.TextSize = 14.000
+
+PrefixButton.Name = "PrefixButton"
+PrefixButton.Parent = SettingsFrame
+PrefixButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+PrefixButton.BorderSizePixel = 0
+PrefixButton.Position = UDim2.new(0.839999974, 0, 0.142857149, 0)
+PrefixButton.Size = UDim2.new(0.159999996, 0, 0, 20)
+PrefixButton.Font = Enum.Font.SourceSans
+PrefixButton.Text = ":"
+PrefixButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+PrefixButton.TextSize = 14.000
+
+Prefix.Name = "Prefix"
+Prefix.Parent = SettingsFrame
+Prefix.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+Prefix.BackgroundTransparency = 0.500
+Prefix.BorderColor3 = Color3.fromRGB(255, 170, 0)
+Prefix.BorderSizePixel = 0
+Prefix.Position = UDim2.new(0, 0, 0.142857149, 0)
+Prefix.Size = UDim2.new(0.839999974, 0, 0, 20)
+Prefix.Font = Enum.Font.SourceSans
+Prefix.Text = "Prefix:  "
+Prefix.TextColor3 = Color3.fromRGB(0, 0, 0)
+Prefix.TextSize = 14.000
+Prefix.TextXAlignment = Enum.TextXAlignment.Right
+
+Help.Name = "Help"
+Help.Parent = BoundlessGrasp
+Help.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Help.BorderColor3 = Color3.fromRGB(255, 170, 0)
+Help.Position = UDim2.new(0.812003553, 0, 0.819819808, 0)
+Help.Size = UDim2.new(0, 100, 0, 75)
+Help.Visible = false
+
+Title_2.Name = "Title"
+Title_2.Parent = Help
+Title_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_2.BackgroundTransparency = 1.000
+Title_2.BorderColor3 = Color3.fromRGB(255, 170, 0)
+Title_2.Size = UDim2.new(0, 100, 0, 14)
+Title_2.Font = Enum.Font.SourceSans
+Title_2.Text = "Print [String]"
+Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.TextSize = 13.000
+Title_2.TextWrapped = true
+Title_2.TextXAlignment = Enum.TextXAlignment.Left
+
+Desc.Name = "Desc"
+Desc.Parent = Help
+Desc.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Desc.BackgroundTransparency = 1.000
+Desc.BorderColor3 = Color3.fromRGB(255, 170, 0)
+Desc.Position = UDim2.new(0, 0, 0, 14)
+Desc.Size = UDim2.new(0, 100, 0, 62)
+Desc.Font = Enum.Font.SourceSans
+Desc.Text = "Prints the string to the console"
+Desc.TextColor3 = Color3.fromRGB(255, 255, 255)
+Desc.TextSize = 13.000
+Desc.TextWrapped = true
+Desc.TextXAlignment = Enum.TextXAlignment.Left
+Desc.TextYAlignment = Enum.TextYAlignment.Top
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(173, 115, 0))}
+UIGradient.Rotation = 90
+UIGradient.Parent = Help
+
+Notification.Name = "Notification"
+Notification.Parent = BoundlessGrasp
+Notification.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Notification.Position = UDim2.new(0, 1010, 0, 617)
+Notification.Size = UDim2.new(0, 100, 0, 75)
+Notification.Visible = false
+Notification.ZIndex = 0
+
+Title_3.Name = "Title"
+Title_3.Parent = Notification
+Title_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.BackgroundTransparency = 1.000
+Title_3.Size = UDim2.new(0, 100, 0, 15)
+Title_3.Font = Enum.Font.SourceSans
+Title_3.Text = "Title"
+Title_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.TextSize = 14.000
+Title_3.TextWrapped = true
+
+Desc_2.Name = "Desc"
+Desc_2.Parent = Notification
+Desc_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Desc_2.BackgroundTransparency = 1.000
+Desc_2.Position = UDim2.new(0, 0, 0.252708346, 0)
+Desc_2.Size = UDim2.new(0, 100, 0, 35)
+Desc_2.Font = Enum.Font.SourceSans
+Desc_2.Text = "This is the description"
+Desc_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Desc_2.TextSize = 14.000
+Desc_2.TextWrapped = true
+Desc_2.TextXAlignment = Enum.TextXAlignment.Left
+Desc_2.TextYAlignment = Enum.TextYAlignment.Top
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(173, 115, 0))}
+UIGradient_2.Rotation = 90
+UIGradient_2.Parent = Notification
+
+Button.Name = "Button"
+Button.Parent = Notification
+Button.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Button.Position = UDim2.new(0, 0, 0.733333349, 0)
+Button.Size = UDim2.new(0, 100, 0, 20)
+Button.Style = Enum.ButtonStyle.RobloxRoundButton
+Button.Font = Enum.Font.SourceSans
+Button.Text = "Ok"
+Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button.TextSize = 14.000
+
+CustomCommands.Name = "CustomCommands"
+CustomCommands.Parent = BoundlessGrasp
+CustomCommands.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+CustomCommands.BorderColor3 = Color3.fromRGB(255, 170, 0)
+CustomCommands.Position = UDim2.new(0.270000011, 0, 0.168249622, 0)
+CustomCommands.Size = UDim2.new(0.243191481, 0, 0.309081107, 0)
+CustomCommands.Visible = false
+
+Title_4.Name = "Title"
+Title_4.Parent = CustomCommands
+Title_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_4.BackgroundTransparency = 1.000
+Title_4.BorderColor3 = Color3.fromRGB(255, 170, 0)
+Title_4.Size = UDim2.new(1, 0, 0.0839999989, 0)
+Title_4.ZIndex = 2
+Title_4.Font = Enum.Font.Oswald
+Title_4.Text = "Custom Commands"
+Title_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+Title_4.TextScaled = true
+Title_4.TextSize = 11.000
+Title_4.TextStrokeColor3 = Color3.fromRGB(255, 170, 0)
+Title_4.TextStrokeTransparency = 0.700
+Title_4.TextWrapped = true
+
+name.Name = "name"
+name.Parent = CustomCommands
+name.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+name.BorderColor3 = Color3.fromRGB(255, 170, 0)
+name.Position = UDim2.new(0, 0, 0.0834091082, 0)
+name.Size = UDim2.new(0.5, 0, 0.0877990872, 0)
+name.Font = Enum.Font.SourceSans
+name.Text = "Name"
+name.TextColor3 = Color3.fromRGB(255, 255, 255)
+name.TextScaled = true
+name.TextSize = 14.000
+name.TextWrapped = true
+
+Req.Name = "Req"
+Req.Parent = CustomCommands
+Req.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Req.BorderColor3 = Color3.fromRGB(255, 170, 0)
+Req.Position = UDim2.new(0, 0, 0.171208203, 0)
+Req.Size = UDim2.new(0.5, 0, 0.0877990872, 0)
+Req.Font = Enum.Font.SourceSans
+Req.Text = "Requirements (optional)"
+Req.TextColor3 = Color3.fromRGB(255, 255, 255)
+Req.TextScaled = true
+Req.TextSize = 14.000
+Req.TextWrapped = true
+
+Desc_3.Name = "Desc"
+Desc_3.Parent = CustomCommands
+Desc_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Desc_3.BorderColor3 = Color3.fromRGB(255, 170, 0)
+Desc_3.Position = UDim2.new(-0, 0, 0.259000003, 0)
+Desc_3.Size = UDim2.new(0.5, 0, 0.175598204, 0)
+Desc_3.Font = Enum.Font.SourceSans
+Desc_3.Text = "Description (optional)"
+Desc_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Desc_3.TextScaled = true
+Desc_3.TextSize = 14.000
+Desc_3.TextWrapped = true
+
+Scripting.Name = "Scripting"
+Scripting.Parent = CustomCommands
+Scripting.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Scripting.BorderColor3 = Color3.fromRGB(255, 170, 0)
+Scripting.Position = UDim2.new(0, 0, 0.434598207, 0)
+Scripting.Size = UDim2.new(1, 0, 0.4389956, 0)
+Scripting.Font = Enum.Font.SourceSans
+Scripting.Text = "Script here"
+Scripting.TextColor3 = Color3.fromRGB(255, 255, 255)
+Scripting.TextSize = 14.000
+Scripting.TextWrapped = true
+
+Add.Name = "Add"
+Add.Parent = CustomCommands
+Add.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Add.BorderColor3 = Color3.fromRGB(255, 170, 0)
+Add.Position = UDim2.new(0, 0, 0.869211078, 0)
+Add.Size = UDim2.new(0.999539852, 0, 0.130788982, 0)
+Add.Font = Enum.Font.SourceSans
+Add.Text = "Add command"
+Add.TextColor3 = Color3.fromRGB(255, 255, 255)
+Add.TextScaled = true
+Add.TextSize = 14.000
+Add.TextWrapped = true
+
+Alias.Name = "Alias"
+Alias.Parent = CustomCommands
+Alias.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Alias.BorderColor3 = Color3.fromRGB(255, 170, 0)
+Alias.Position = UDim2.new(0.5, 0, 0.0829999968, 0)
+Alias.Size = UDim2.new(0.5, 0, 0.351196408, 0)
+Alias.Font = Enum.Font.SourceSans
+Alias.Text = "Alias, Alias2, make sure to seperate with commas and this is optional"
+Alias.TextColor3 = Color3.fromRGB(255, 255, 255)
+Alias.TextScaled = true
+Alias.TextSize = 14.000
+Alias.TextWrapped = true
+
+X.Name = "X"
+X.Parent = CustomCommands
+X.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+X.BackgroundTransparency = 1.000
+X.Position = UDim2.new(0.928623557, 0, -3.34926966e-08, 0)
+X.Size = UDim2.new(0.0675845444, 0, 0.0834091455, 0)
+X.Font = Enum.Font.SourceSans
+X.Text = "X"
+X.TextColor3 = Color3.fromRGB(255, 0, 0)
+X.TextScaled = true
+X.TextSize = 14.000
+X.TextWrapped = true
+
+GameOnly.Name = "GameOnly"
+GameOnly.Parent = CustomCommands
+GameOnly.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+GameOnly.BorderColor3 = Color3.fromRGB(255, 170, 0)
+GameOnly.Position = UDim2.new(0, 0, -3.34926966e-08, 0)
+GameOnly.Size = UDim2.new(0.29523775, 0, 0.0829999894, 0)
+GameOnly.Font = Enum.Font.SourceSans
+GameOnly.Text = "This game only [ ]"
+GameOnly.TextColor3 = Color3.fromRGB(255, 255, 255)
+GameOnly.TextScaled = true
+GameOnly.TextSize = 14.000
+GameOnly.TextWrapped = true
+
+History.Name = "History"
+History.Parent = BoundlessGrasp
+History.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+History.BorderColor3 = Color3.fromRGB(255, 170, 0)
+History.Position = UDim2.new(0.602500021, 0, 0.11126183, 0)
+History.Size = UDim2.new(0.243191481, 0, 0.309081107, 0)
+History.Visible = false
+
+Title_5.Name = "Title"
+Title_5.Parent = History
+Title_5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_5.BackgroundTransparency = 1.000
+Title_5.BorderColor3 = Color3.fromRGB(255, 170, 0)
+Title_5.Size = UDim2.new(1, 0, 0.0839999989, 0)
+Title_5.ZIndex = 2
+Title_5.Font = Enum.Font.Oswald
+Title_5.Text = "Command History"
+Title_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+Title_5.TextScaled = true
+Title_5.TextSize = 11.000
+Title_5.TextStrokeColor3 = Color3.fromRGB(255, 170, 0)
+Title_5.TextStrokeTransparency = 0.700
+Title_5.TextWrapped = true
+
+ScrollingFrame_2.Parent = History
+ScrollingFrame_2.Active = true
+ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame_2.BorderColor3 = Color3.fromRGB(255, 170, 0)
+ScrollingFrame_2.Position = UDim2.new(0, 0, 0.0834091082, 0)
+ScrollingFrame_2.Size = UDim2.new(0, 291, 0, 208)
+ScrollingFrame_2.BottomImage = "rbxassetid://5903324492"
+ScrollingFrame_2.MidImage = "rbxassetid://5903324492"
+ScrollingFrame_2.ScrollBarThickness = 3
+ScrollingFrame_2.TopImage = "rbxassetid://5903324492"
+
+History_2.Name = "History"
+History_2.Parent = ScrollingFrame_2
+History_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+History_2.BackgroundTransparency = 1.000
+History_2.BorderColor3 = Color3.fromRGB(255, 170, 0)
+History_2.Size = UDim2.new(1, 0, 1, 0)
+History_2.ZIndex = 2
+History_2.Font = Enum.Font.Fantasy
+History_2.Text = "Command History"
+History_2.TextColor3 = Color3.fromRGB(255, 170, 0)
+History_2.TextSize = 11.000
+History_2.TextStrokeColor3 = Color3.fromRGB(255, 170, 0)
+History_2.TextWrapped = true
+History_2.TextXAlignment = Enum.TextXAlignment.Left
+History_2.TextYAlignment = Enum.TextYAlignment.Top
+
+X_2.Name = "X"
+X_2.Parent = History
+X_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+X_2.BackgroundTransparency = 1.000
+X_2.Position = UDim2.new(0.928623557, 0, -3.34926966e-08, 0)
+X_2.Size = UDim2.new(0.0675845444, 0, 0.0834091455, 0)
+X_2.Font = Enum.Font.SourceSans
+X_2.Text = "X"
+X_2.TextColor3 = Color3.fromRGB(255, 0, 0)
+X_2.TextScaled = true
+X_2.TextSize = 14.000
+X_2.TextWrapped = true
+
+-- Scripts:
+
+local function DAYVOJ_fake_script() -- BoundlessGrasp.MainScript 
+	local script = Instance.new('LocalScript', BoundlessGrasp)
+
+	local debugmode = true
+	local guiname = ""
+	pcall(function()
+		local guiname = game:HttpGet("https://raw.githubusercontent.com/SanitysHelper/New-Admin/main/Name")
+	end)
+	if not guiname or guiname == "" then
+		guiname = "Bart Simpson"
+	end
+	local version = 1.5
+	guiname = guiname.." v".. version
+	repeat wait() until game:IsLoaded()
+	local oldgravity = workspace.Gravity
+	script.Parent.HolderFrame.Title.Text = guiname
+	local prefix = Enum.KeyCode.Semicolon
+	----------------------------------------------------------------
+	local boundlessgrasp = script.Parent
+	local holderframe = boundlessgrasp.HolderFrame
+	local title = holderframe.Title
+	local cmdholder = holderframe.CommandHolder
+	local storage = holderframe.Storage
+	local cmdbar = holderframe.ScrollingFrame.CommandBar
+	local settingsbutton = holderframe.Settings
+	local help = boundlessgrasp.Help
+	local settingsframe = boundlessgrasp.SettingsFrame
+	local notification = boundlessgrasp.Notification
+	----------------------------------------------------------------
+	local commands = {}
+	local cmdlabels = {}
+	local history = {}
+	local historylocation = 0
+	----------------------------------------------------------------
+	local textservice = game:GetService("TextService")
+	local uis = game:GetService("UserInputService")
+	local runservice = game:GetService("RunService")
+	local tweenservice = game:GetService("TweenService")
+	----------------------------------------------------------------
+	local lp = game.Players.LocalPlayer
+	local character = lp.Character
+	lp.CharacterAdded:Connect(function(char)
+		character = char
+	end)
+	----------------------------------------------------------------
+	function miniwait()
+		runservice.Stepped:Wait()
+		return true
+	end
+	--163 - 74
+	spawn(function()
+		local pattern = false
+		tweenify(10,Enum.EasingStyle.Quad,Enum.EasingDirection.In,{
+			["TextColor3"] = Color3.fromHSV(163/350, 1, 1)
+		}, cmdbar)
+		while wait(10) do
+			pattern = not pattern
+			if pattern == false then
+				tweenify(10,Enum.EasingStyle.Quad,Enum.EasingDirection.In,{
+					["TextColor3"] = Color3.fromHSV(165/350, 1, 1)
+				}, cmdbar)
+			else
+				tweenify(10,Enum.EasingStyle.Quad,Enum.EasingDirection.In,{
+					["TextColor3"] = Color3.fromHSV(140/350, 1, 1)
+				}, cmdbar)
+			end
+		end
+	end)
+	
+	function tweenify(time, easingstyle, easingdirection , proptable, object)
+		local info = TweenInfo.new(time, easingstyle, easingdirection)
+		local tween = tweenservice:Create(object, info, proptable)
+		tween:Play()
+	end
+	
+	function drag(object, autopos, axis)
+		local entered = false
+		local dragging = false
+		local delta = nil
+		object.MouseEnter:Connect(function()
+			entered = true
+			object.MouseLeave:Wait()
+			entered = false
+		end)
+		local mouse = lp:GetMouse()
+		uis.InputBegan:Connect(function(thing)
+			if entered == true and thing.UserInputType == Enum.UserInputType.MouseButton1 then
+				if axis and axis:lower() == "x" then
+					delta = tooffset(UDim2.fromOffset(mouse.X, 0) - object.Position)
+				elseif axis and axis:lower() == "y" then
+					delta = tooffset(UDim2.fromOffset(mouse.X, 0) - object.Position)
+				else
+					delta = tooffset(UDim2.fromOffset(mouse.X, mouse.Y) - object.Position)
+				end
+				dragging = true
+				repeat miniwait() until thing.UserInputState == Enum.UserInputState.End
+				dragging = false
+				if not autopos then
+					if axis and type(axis) == "string" then
+						reposition(object, axis)
+					else
+						reposition(object)
+					end
+				end
+			end
+		end)
+		mouse.Move:Connect(function()
+			if dragging == true then
+				local posi = nil
+				if axis and axis:lower() == "x" then
+					posi = -delta + UDim2.fromOffset(mouse.X, 0)
+				elseif axis and axis:lower() == "y" then
+					posi = -delta + UDim2.fromOffset(object.AbsolutePosition.X,mouse.Y)
+				else
+					posi = -delta + UDim2.fromOffset(mouse.X,mouse.Y)
+				end
+				object:TweenPosition(toscale(posi), Enum.EasingDirection.In, Enum.EasingStyle.Linear, 0.025, true, function()
+				end) 
+			end
+		end)
+	end
+	
+	drag(boundlessgrasp.History)
+	drag(boundlessgrasp.CustomCommands)
+	drag(boundlessgrasp.SettingsFrame)
+	drag(boundlessgrasp.HolderFrame, nil, "x")
+	
+	function open()
+		local finished = false
+		holderframe:TweenPosition(UDim2.fromScale(holderframe.Position.X.Scale,1 - holderframe.Size.Y.Scale), Enum.EasingDirection.In, Enum.EasingStyle.Quad, 0.2, true, function()
+			finished = true
+			tweenify(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.In, {
+				["BackgroundTransparency"] = 0
+			}, holderframe)
+			tweenify(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.In, {
+				["TextTransparency"] = 0;
+				["TextStrokeTransparency"] = 0.7
+			}, holderframe.Title)
+		end)
+		repeat runservice.Stepped:Wait() until finished ==true
+	end
+	
+	function close()
+		if uis:GetFocusedTextBox() ~= cmdbar then
+			local finished = false
+			holderframe:TweenPosition(UDim2.fromScale(holderframe.Position.X.Scale,0.981), Enum.EasingDirection.In, Enum.EasingStyle.Quad, 0.2, true, function()
+				finished = true
+				tweenify(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.In, {
+					["BackgroundTransparency"] = 0.5
+				}, holderframe)
+				tweenify(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.In, {
+					["TextTransparency"] = 0.5;
+					["TextStrokeTransparency"] = holderframe.Title.TextStrokeTransparency * 1.5
+				}, holderframe.Title)
+			end)
+			repeat runservice.Stepped:Wait() until finished ==true
+		end
+	end
+	
+	function forceclose()
+		local finished = false
+		holderframe:TweenPosition(UDim2.fromScale(holderframe.Position.X.Scale,0.981), Enum.EasingDirection.In, Enum.EasingStyle.Quad, 0.2, true, function()
+			finished = true
+			tweenify(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.In, {
+				["BackgroundTransparency"] = 0.5
+			}, holderframe)
+			tweenify(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.In, {
+				["TextTransparency"] = 0.5;
+				["TextStrokeTransparency"] = holderframe.Title.TextStrokeTransparency * 1.5
+			}, holderframe.Title)
+		end)
+		repeat runservice.Stepped:Wait() until finished ==true
+	end
+	
+	function resize(thing, choice, adding)
+		if not choice then choice = "y" else choice = choice:lower() end
+		if choice == "y" then
+			thing.Size = UDim2.new(thing.Size.X.Scale,thing.Size.X.Offset,0,0)
+			--while thing.TextFits == false do
+			--	thing.Size = thing.Size + UDim2.fromOffset(0, thing.TextSize)
+			--end
+			thing.Size = thing.Size + UDim2.fromOffset(0,gettextsize(thing.Text, thing, true).Y)
+		elseif choice == "x" then
+			thing.Size = UDim2.new(0,0,thing.Size.Y.Scale,thing.Size.Y.Offset)
+			--while thing.TextFits == false do
+			--	thing.Size = thing.Size + UDim2.fromOffset(1, 0)
+			--end
+			thing.Size = thing.Size + UDim2.fromOffset(gettextsize(thing.Text, thing).X, 0)
+		end
+		if adding then
+			thing.Size = thing.Size + adding
+		end
+		return thing.AbsoluteSize
+	end
+	
+	function toscale(pos)
+		local x = pos.X.Scale + (pos.X.Offset / boundlessgrasp.AbsoluteSize.X)
+		local y = pos.Y.Scale + (pos.Y.Offset / boundlessgrasp.AbsoluteSize.Y)
+		return UDim2.fromScale(x,y)
+	end
+	
+	function tooffset(pos)
+		local x = pos.X.Offset  + (boundlessgrasp.AbsoluteSize.X * pos.X.Scale)
+		local y = pos.Y.Offset  + (boundlessgrasp.AbsoluteSize.Y * pos.Y.Scale)
+		return UDim2.fromOffset(x,y)
+	end
+	
+	function reposition(thing, axis)
+		local pos = thing.AbsolutePosition + thing.AbsoluteSize
+		local x = pos.X
+		local y = pos.Y
+		if axis and axis:lower() == "x" then
+			if x > boundlessgrasp.AbsoluteSize.X then
+				x = boundlessgrasp.AbsoluteSize.X
+			elseif x -thing.AbsoluteSize.X <= 0 then
+				x = 0 + thing.AbsoluteSize.X
+			end
+		elseif axis and axis:lower() == "y" then
+			if y > boundlessgrasp.AbsoluteSize.Y then
+				y = boundlessgrasp.AbsoluteSize.Y
+			elseif y - thing.AbsoluteSize.Y <= 0   then
+				y = 0 + thing.AbsoluteSize.Y
+			end
+		else
+			if x > boundlessgrasp.AbsoluteSize.X then
+				x = boundlessgrasp.AbsoluteSize.X
+			elseif x -thing.AbsoluteSize.X <= 0 then
+				x = 0 + thing.AbsoluteSize.X
+			end
+			if y > boundlessgrasp.AbsoluteSize.Y then
+				y = boundlessgrasp.AbsoluteSize.Y
+			elseif y - thing.AbsoluteSize.Y <= 0   then
+				y = 0 + thing.AbsoluteSize.Y
+			end
+		end
+		thing:TweenPosition(toscale(UDim2.fromOffset(x - thing.AbsoluteSize.X,y - thing.AbsoluteSize.Y)), Enum.EasingDirection.In, Enum.EasingStyle.Quad, 0.25, true)
+	end
+	
+	notificationopened = false
+	
+	function closenotification()
+		notificationopened = false
+		print("closed")
+		spawn(function()
+			close()
+		end)
+		local offset = tooffset(notification.Position)
+		local finished = false
+		notification:TweenPosition(
+			UDim2.fromOffset(offset.X.Offset, boundlessgrasp.AbsoluteSize.Y + notification.AbsoluteSize.Y + 1),
+			Enum.EasingDirection.In,
+			Enum.EasingStyle.Quart,
+			0.5,
+			true,
+			function ()
+				finished = true
+				notification.Visible = false
+			end
+		)
+		repeat game:GetService("RunService").Stepped:Wait() until finished == true
+	end
+	
+	function opennotification()
+		notificationopened = true
+		open()
+		notification.Visible = true
+		print("opened")
+		local offset = nil
+		if boundlessgrasp.AbsoluteSize.X /2 < holderframe.AbsolutePosition.X + notification.AbsoluteSize.X/2 then
+			offset = holderframe.AbsolutePosition - Vector2.new(notification.AbsoluteSize.X, 0)
+		else
+			offset = holderframe.AbsolutePosition + Vector2.new(holderframe.AbsoluteSize.X, 0)
+		end
+		local finished = false
+		notification:TweenPosition(
+			UDim2.fromOffset(offset.X, offset.Y),
+			Enum.EasingDirection.Out,
+			Enum.EasingStyle.Quart,
+			0.5,
+			true,
+			function ()
+				finished = true
+				reposition(notification)
+			end
+		)
+		repeat game:GetService("RunService").Stepped:Wait() until finished == true
+	end
+	
+	function notify(title, text, time, buttonpressed, buttontext)
+		if not buttontext then
+			buttontext = "Okay"
+		end
+		closenotification()
+		local pressed = false
+		notification.Title.Text = title
+		notification.Desc.Text = text
+		local size1 = resize(notification.Title, "y", UDim2.fromOffset(0,10)).Y
+		local size2 = resize(notification.Desc, "y", UDim2.fromOffset(0,5)).Y
+		local totalsize = size1 + size2 + notification.Button.AbsoluteSize.Y
+		notification.Desc.Position = UDim2.new(0,0,0,notification.Title.AbsoluteSize.Y)
+		notification.Button.Position = UDim2.fromOffset(0,size1+size2)
+		notification.Size = UDim2.fromOffset(notification.AbsoluteSize.X, totalsize)
+		opennotification()
+		local timer = tick() + time
+		local pressing = notification.Button.MouseButton1Click:Connect(function()
+			pressed = true
+			print("Pressed")
+		end)
+		repeat 
+			game:GetService("RunService").Stepped:Wait() 
+			local timer2 = math.floor((timer-tick())* 100)*0.01
+			if timer2 < 0 then
+				timer2 = 0
+			end
+			notification.Button.Text = buttontext.." ("..timer2..")"
+		until timer  <=  tick() or pressed == true or notificationopened == false
+		pressing = pressing:Disconnect()
+		if pressed == true and type(buttonpressed) == "function" then
+			spawn(function()
+				print("ran thing")
+				buttonpressed()
+			end)
+		end
+		if notificationopened == true then
+			closenotification()
+		end
+	end
+	
+	function sortcmdlabels()
+		table.sort(cmdlabels, function(a,b)
+			return a.Name < b.Name
+		end)
+		local totalsize = 0
+		for i,v in pairs(cmdlabels) do
+			if v.Parent == cmdholder then
+				resize(v,"y")
+				v:TweenPosition(UDim2.new(0, 0, 0, totalsize), Enum.EasingDirection.In, Enum.EasingStyle.Quad, 0.1, true)
+				totalsize = totalsize + v.Size.Y.Offset
+			end
+		end
+		cmdholder.CanvasSize = UDim2.fromOffset(0, totalsize)
+		if cmdholder.CanvasSize.Y.Offset < cmdholder.AbsoluteSize.Y then
+			for i,v in pairs(cmdholder:GetChildren()) do
+				v.Size = UDim2.new(1,0,0,v.Size.Y.Offset)
+			end
+		end
+	end
+	
+	function gettextsize(text, object, wrapped)
+		object = object:Clone()
+		object.Text = text
+		if wrapped == true then
+			object.TextWrapped = true
+			object.Size = object.Size + UDim2.fromScale(0,555)
+		else
+			object.TextWrapped = false
+			object.Size = UDim2.fromScale(555,555)
+		end
+		object.Position = UDim2.fromScale(0,0)
+		object.TextXAlignment = Enum.TextXAlignment.Left
+		object.TextYAlignment = Enum.TextYAlignment.Top
+		object.Visible = false
+		object.Parent = boundlessgrasp
+		text = object.TextBounds
+		object:Destroy()
+		return text
+	end
+	
+	function fixmagicchars(string)
+		string = string:gsub("%%", "%%%%")
+		string = string:gsub("%$", "%%#")
+		string = string:gsub("%^", "%%^")
+		string = string:gsub("%*", "%%*")
+		string = string:gsub("%(", "%%(")
+		string = string:gsub("%)", "%%)")
+		string = string:gsub("%.", "%%.")
+		string = string:gsub("%[", "%%[")
+		string = string:gsub("%]", "%%]")
+		string = string:gsub("%+", "%%+")
+		string = string:gsub("%-", "%%-")
+		string = string:gsub("%?", "%%?")
+		return string
+	end
+	
+	function searchcmds(text)
+		if text and text:gsub(" ", "") ~= "" then
+			local cursorpos = cmdbar.CursorPosition
+			local ranges = {}
+			local total = 0
+	
+			for i,v in pairs(text:split("^")) do
+				if i < #text:split("^") then
+					total = total + v:len() + 1
+				end
+			end
+	
+			text = text:split("^")[#text:split("^")]
+	
+			for i,v in pairs(text:split("|")) do
+				ranges[#ranges+1] = {min = total, max = total + v:len() + 1}
+				total = total + v:len() + 1
+			end
+	
+			for i,v in pairs(ranges) do
+				if cursorpos >= v.min and cursorpos <= v.max then
+					text = text:split("|")[i]
+					break
+				end
+			end
+	
+			local cmd = text:split(" ")[1]
+			for i,v in pairs(cmdlabels) do
+				if not v.Text:lower():match(fixmagicchars(cmd)) then
+					v.Parent = storage
+				else
+					v.Parent = cmdholder
+				end
+			end
+		else
+			for i,v in pairs(cmdlabels) do
+				v.Parent = cmdholder
+			end
+		end
+		sortcmdlabels()
+	end
+	
+	
+	function ac(cmd, rec, desc, scriptie, alias, parentcmd)
+		miniwait()
+		if type(cmd) == "string" and type(rec) == "string" and type(desc) == "string" and type(scriptie) == "function" then
+			local command = {
+				name = cmd;
+				requirement = rec;
+				description = desc;
+				scriptie = scriptie;
+			}
+	
+			if not parentcmd then
+				local newcmd = cmdholder.NewCmd:Clone()
+				newcmd.Parent = cmdholder
+				newcmd.Name = cmd
+				newcmd.Text = cmd
+				newcmd.Visible = true
+				command["label"] = newcmd
+				newcmd.Changed:Connect(function(thing)
+					if thing == "Text" then
+						resize(newcmd, "y")
+					end
+				end)
+				cmdlabels[#cmdlabels+1] = newcmd
+				sortcmdlabels()
+				local entered = false
+				newcmd.MouseEnter:Connect(function()
+					tweenify(0.25, Enum.EasingStyle.Linear, Enum.EasingDirection.In, {
+						["BackgroundColor3"] = Color3.new(0.333333, 1, 1);
+						["BackgroundTransparency"] = 0
+					}, newcmd)
+					entered = true
+					local x = holderframe.AbsolutePosition.X - help.AbsoluteSize.X
+					if boundlessgrasp.AbsoluteSize.X/2 > holderframe.AbsolutePosition.X + help.AbsoluteSize.X/2 then
+						x = holderframe.AbsolutePosition.X + holderframe.AbsoluteSize.X
+					end
+					local y = newcmd.AbsolutePosition.Y
+					help.Title.Text = cmd.." [".. rec.."]"
+					help.Title.Text = help.Title.Text:gsub("%[%]","")
+					resize(help.Title,"y")
+					help.Desc.Position = UDim2.fromOffset(0,help.Title.AbsoluteSize.Y)
+					help.Desc.Text = desc
+					resize(help.Desc,"y")
+					help.Size = UDim2.fromOffset(help.Size.X.Offset, help.Desc.AbsoluteSize.Y + help.Title.AbsoluteSize.Y)
+					if newcmd.AbsolutePosition.Y + help.AbsoluteSize.Y > boundlessgrasp.AbsoluteSize.Y then
+						help.Position = UDim2.fromOffset(x, boundlessgrasp.AbsoluteSize.Y - help.AbsoluteSize.Y)
+					else
+						help.Position = UDim2.fromOffset(x,y)
+					end
+					while entered == true and miniwait() do
+						if entered == true then
+							help.Visible = true
+						end
+					end
+				end)
+				newcmd.MouseLeave:Connect(function()
+					tweenify(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.In, {
+						["BackgroundColor3"] = Color3.new(1, 0.666667, 0);
+						["BackgroundTransparency"] = 0.5
+					}, newcmd)
+					help.Visible = false
+					entered = false
+				end)
+			else
+				parentcmd.label.Text = parentcmd.label.Text.."/"..cmd
+				command["parent"] = parentcmd
+			end
+			commands[cmd] = command
+			-----------------------------------------------------------------
+	
+			if alias and type(alias) == "table" then
+				for i,v in pairs(alias) do
+					ac(v, rec, desc, scriptie,nil, command)
+				end
+			elseif alias and type(alias) == "string" then
+				ac(alias, rec, desc, scriptie, nil, command)
+			end
+		end
+	end
+	
+	function updatehistorybox()
+		if boundlessgrasp.History.Visible == true then
+			local customhistory = table.concat(history, "motherandfaterfatherlol"):split("motherandfaterfatherlol")
+			if customhistory[historylocation] then
+				customhistory[historylocation] = "-"..customhistory[historylocation]
+			else
+				customhistory[#customhistory] = "-".. customhistory[#customhistory]
+			end
+			boundlessgrasp.History.ScrollingFrame.History.Text = table.concat(customhistory,"\n")
+			boundlessgrasp.History.ScrollingFrame.CanvasSize = UDim2.fromOffset(gettextsize(table.concat(customhistory,"\n"),boundlessgrasp.History.ScrollingFrame.History).X, gettextsize(table.concat(customhistory,"\n"),boundlessgrasp.History.ScrollingFrame.History).Y)
+		end
+	end
+	
+	function addhistory(cmd)
+		if not table.find(history, cmd) then
+			history[#history+1] = cmd
+			historylocation = #history + 1
+		elseif table.find(history, cmd) then
+			table.remove(history, table.find(history, cmd))
+			history[#history+1] = cmd
+			historylocation = #history + 1
+		end
+		updatehistorybox()
+	end
+	
+	function runcmd(cmd, pressed)
+		if pressed then
+			addhistory(cmd)
+		end
+		for i,v in pairs(cmd:split("|")) do
+			if commands[v:split(" ")[1]] and not debugmode and not v:match("%^") then
+				local returnthing = nil
+				local ran,msg = pcall(function()
+					returnthing = commands[v:split(" ")[1]].scriptie(v:split(" "))
+				end)
+				if ran == false then
+					print(msg)
+				end
+				return returnthing
+			elseif commands[v:split(" ")[1]] and not v:match("%^") then
+				local returnthing = commands[v:split(" ")[1]].scriptie(v:split(" "))
+				return returnthing
+			elseif #v:split("^") >= 3 then
+				local info = v:split("^")
+				local amount = info[1]
+				local time = info[2]
+				local cmding = info[3]
+				for i = 1,amount do
+					runcmd(cmding)
+					wait(time)
+				end
+			end
+		end
+	end
+	---------------------------------------------------------------
+	cmdbar.FocusLost:Connect(function(pressed)
+		if pressed then
+			local text = cmdbar.Text
+			spawn(function()
+				runcmd(text, true)
+			end)
+			cmdbar.Text = ""
+			forceclose()
+		end
+		searchcmds("")
+	end)
+	
+	textqueue = {}
+	local poopass = 0
+	
+	runservice.Stepped:Connect(function()
+		poopass = poopass+1
+		if textqueue[1] and poopass >= 5 then
+			searchcmds(textqueue[1])
+			table.remove(textqueue, 1)
+			poopass = 0
+		end
+	end)
+	
+	cmdbar.Changed:Connect(function(thing)
+		if thing == "Text" or thing == "CursorPosition" then
+			cmdbar.Text = cmdbar.Text:gsub(uis:GetStringForKeyCode(prefix),"")
+			cmdbar.Text = cmdbar.Text:gsub("\t","")
+			resize(cmdbar,"x", UDim2.fromOffset(2))
+			cmdbar.Parent.CanvasSize = UDim2.fromOffset(cmdbar.AbsoluteSize.X, 0)
+			if cmdbar.AbsoluteSize.X > cmdbar.Parent.AbsoluteWindowSize.X and cmdbar.CursorPosition-5 > 0 then
+				cmdbar.Parent.CanvasPosition = Vector2.new(gettextsize(cmdbar.Text:sub(0,cmdbar.CursorPosition-5), cmdbar).X, 0)
+			else
+				cmdbar.Parent.CanvasPosition = Vector2.new(0,0)
+			end
+			cmdbar.Text = cmdbar.Text:sub(1,200)
+			if textqueue[#textqueue] ~= cmdbar.Text then
+				textqueue[#textqueue+1] = cmdbar.Text
+			end
+		end
+	end)
+	
+	uis.InputBegan:Connect(function(key)
+		if key.KeyCode == prefix and not uis:GetFocusedTextBox() then
+			spawn(function()
+				open()
+			end)
+			cmdbar:CaptureFocus()
+		elseif key.KeyCode == Enum.KeyCode.Down and uis:GetFocusedTextBox() == cmdbar then
+			if history[historylocation-1] then
+				historylocation = historylocation - 1
+				cmdbar.Text = history[historylocation]
+				cmdbar.CursorPosition = cmdbar.Text:len() + 1
+				updatehistorybox()
+			end
+		elseif key.KeyCode == Enum.KeyCode.Up and uis:GetFocusedTextBox() == cmdbar then
+			if history[historylocation+1] then
+				historylocation = historylocation + 1
+				cmdbar.Text = history[historylocation]
+				cmdbar.CursorPosition = cmdbar.Text:len() + 1
+				updatehistorybox()
+			end
+		elseif key.KeyCode == Enum.KeyCode.Tab and uis:GetFocusedTextBox() == cmdbar then
+			miniwait()
+			for i,v in pairs(cmdlabels) do
+				if v.Parent == cmdholder then
+					cmdbar.Text = v.Name.." "
+					cmdbar.CursorPosition = cmdbar.Text:len() + 1
+					break
+				end
+			end
+		end
+	end)
+	
+	settingsbutton.MouseButton1Click:Connect(function()
+		settingsframe.Visible = not settingsframe.Visible
+	end)
+	
+	local keybinds = {}
+	
+	uis.InputBegan:Connect(function(key)
+		wait()
+		if key.KeyCode ~= Enum.KeyCode.Unknown and keybinds[tostring(key.KeyCode):gsub("Enum.KeyCode.", "")] and not uis:GetFocusedTextBox() then
+			if keybinds[tostring(key.KeyCode):gsub("Enum.KeyCode.", "")].Stopped == false then
+				keybinds[tostring(key.KeyCode):gsub("Enum.KeyCode.", "")].Script()
+			end
+		end
+	end)
+	----------------------------------------------------------------
+	function getroot(player)
+		miniwait()
+		if player and type(player) == "userdata" and player:IsA("Player") then
+			return player.Character:FindFirstChild("HumanoidRootPart")
+		elseif not player then
+			return character:FindFirstChild("HumanoidRootPart")
+		end
+	end
+	
+	function addkeybind(key, scriptie)
+		local newbox = {
+			Script = scriptie;
+			Stopped = false
+		}
+		keybinds[key] = newbox
+	end
+	
+	function removekeybind(key)
+		keybinds[key].Stopped = true
+	end
+	
+	function getkey()
+		wait()
+		local key = nil
+		spawn(function()
+			notify("Press a Key", "Enter in a key after you press this button", 5)
+		end)
+		local functo = uis.InputBegan:Connect(function(thing)
+			if thing.KeyCode ~= Enum.KeyCode.Unknown then
+				key = tostring(thing.KeyCode):gsub("Enum.KeyCode.", "")
+			end
+		end)
+		repeat miniwait() until key ~= nil
+		functo = functo:Disconnect()
+		spawn(function()
+			notify("Key Pressed", "Pressed the "..key.." key.", 2)
+		end)
+		return key
+	end
+	
+	function gethumanoid(player)
+		miniwait()
+		if player and type(player) == "userdata" and player:IsA("Player") then
+			return player.Character:FindFirstChild("Humanoid")
+		elseif not player then
+			return character:FindFirstChild("Humanoid")
+		end
+	end
+	
+	function chat(msg)
+		require(game.Players.LocalPlayer.PlayerScripts.ChatScript.ChatMain).MessagePosted:fire(msg)
+		game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(msg,"All")
+	end
+	
+	function getplayer(name)
+		miniwait()
+		name = name:lower()
+		if name == "me" then
+			return {
+				name = lp.Name;
+				player = lp
+			}
+		elseif name == "random" then
+			local selected = game.Players:GetPlayers()[math.random(1, #game.Players:GetPlayers())]
+			return {
+				name = selected.Name;
+				player = selected
+			}
+		else
+			local chosen = {
+				name = nil;
+				player = nil
+			}
+			for i,v in pairs(game.Players:GetPlayers()) do
+				local pame = v.Name:lower()
+				if pame == name then
+					chosen.name = v.Name
+					chosen.player = v
+				elseif pame:lower():match(name) and chosen.name == nil then
+					chosen.name = v.Name
+					chosen.player = v
+				end
+			end
+			return chosen
+		end
+	end
+	
+	function cbring(player)
+		local root = getroot(getplayer(player).player)
+		local lroot = getroot()
+		if root and lroot then
+			root.CFrame = lroot.CFrame + lroot.CFrame.LookVector * 1.5
+		end
+	end
+	----------------------------------------------------------------
+	ac("print", "String", "Prints a string to the console", function(args)
+		print(table.concat(args," ",2))
+	end)
+	
+	ac("walkspeed", "Number", "Sets your speed to an integer", function(args)
+		if gethumanoid() then
+			--gethumanoid().WalkSpeed = args[2]
+			tweenify(1, Enum.EasingStyle.Linear, Enum.EasingDirection.In, {
+				["WalkSpeed"] = tonumber(args[2])
+			}, gethumanoid())
+		end
+	end, {"speed", "ws"})
+	
+	ac("jumppower", "Number", "Sets your jump height to an integer", function(args)
+		if gethumanoid() then
+			gethumanoid().JumpPower = args[2]
+		end
+	end, {"jp"})
+	
+	ac("goto","Player","Teleports you to a player", function(args)
+		local player = getplayer(args[2]).player
+		local root = getroot(player)
+		if root and getroot() then
+			getroot().CFrame = root.CFrame
+		end
+	end, {"teleport","to"})
+	
+	ac("gravity", "Number", "Sets the workspace's gravity to a number of your chosing", function(args)
+		workspace.Gravity = args[2]
+	end, "grav")
+	
+	ac("ungravity", "", "Resets the gravity to ".. oldgravity, function()
+		workspace.Gravity = oldgravity
+	end, {"ungrav"})
+	
+	ac("sit", "None", "Makes your character sit like a good boy/girl", function()
+		local human = gethumanoid()
+		if human then
+			human.Sit = true
+		end
+	end)
+	
+	ac("unsit", "None", "Makes your character not sit like a bad boy/girl", function()
+		local human = gethumanoid()
+		if human then
+			human.Sit = false
+		end
+	end)
+	
+	local nosit = nil
+	local diedsit = nil
+	ac("nosit", "None", "Attempts to make your character never sit", function(args)
+		runcmd("unnosit ok|unsit")
+	
+		local function sitcheck(thing)
+			if gethumanoid().Sit then
+				gethumanoid().Sit = false
+			end
+		end
+	
+		nosit = gethumanoid():GetPropertyChangedSignal("Sit"):Connect(sitcheck)
+		local function nositdiedlol()
+			repeat wait() until character ~= nil and gethumanoid()
+			nosit:Disconnect()
+			nosit = gethumanoid():GetPropertyChangedSignal("Sit"):Connect(sitcheck)
+		end
+		diedsit = lp.CharacterAdded:Connect(nositdiedlol)
+		if not args[2] then
+			notify("Nosit [On]", "No sit has been enabled. Click the button to turn it off", 5, function()
+				runcmd("unnosit")
+			end)
+		end
+	end)
+	
+	ac("unnosit", "", "Attempts to disable the nosit command", function(args)
+		if nosit then
+			nosit:Disconnect()
+		end
+		if diedsit then
+			diedsit:Disconnect()
+		end
+		if not args[2] then
+			notify("Nosit [Off]", "No sit has been disabled. Click the button to turn it on", 5, function()
+				runcmd("nosit")
+			end)
+		end
+	end)
+	
+	local infinitejump = nil
+	local infinitejumpdead = nil
+	
+	ac("infinitejump", "", "Attempts to make you jump infinitely", function()
+		runcmd("uninfinitejump")
+		infinitejump = gethumanoid().Changed:Connect(function(thing)
+			if thing == "Jump" and gethumanoid().Jump == true then
+				gethumanoid():ChangeState(Enum.HumanoidStateType.Jumping)
+			end
+		end)
+	
+		infinitejumpdead = lp.CharacterAdded:Connect(function()
+			repeat wait() until gethumanoid()
+			infinitejump:Disconnect()
+			infinitejump = gethumanoid().Changed:Connect(function(thing)
+				if thing == "Jump" and gethumanoid().Jump == true then
+					gethumanoid():ChangeState(Enum.HumanoidStateType.Jumping)
+				end
+			end)
+		end)
+	end, {"infjump"})
+	
+	ac("uninfinitejump", "", "Attempts to stop making you jump infinitely", function()
+		if infinitejump then infinitejump:Disconnect() end
+		if infinitejumpdead then infinitejumpdead:Disconnect() end
+	end, {"uninfjump"})
+	
+	local swimming = nil
+	local swimdied = nil
+	ac("swim", "", "Makes you swim in the air; similar to flying", function()
+		runcmd("unswim")
+		runcmd("gravity 0")
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.Climbing,false)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.FallingDown,false)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.Flying,false)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.Freefall,false)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.GettingUp,false)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.Jumping,false)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.Landed,false)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.Physics,false)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.PlatformStanding,false)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.Ragdoll,false)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.Running,false)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.RunningNoPhysics,false)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.Seated,false)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.StrafingNoPhysics,false)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.Swimming,false)
+		gethumanoid():ChangeState(Enum.HumanoidStateType.Swimming)
+		swimdied = gethumanoid().Died:Connect(function()
+			runcmd("unswim")
+		end)
+	end)
+	
+	ac("unswim", "", "Makes you fall to your doom if you're high in the air while swimming", function()
+		if swimming then swimming:Disconnect() end
+		if swimdied then swimdied:Disconnect() end
+		runcmd("ungravity")
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.Climbing,true)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.FallingDown,true)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.Flying,true)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.Freefall,true)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.GettingUp,true)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.Jumping,true)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.Landed,true)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.Physics,true)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.PlatformStanding,true)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.Ragdoll,true)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.Running,true)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.RunningNoPhysics,true)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.Seated,true)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.StrafingNoPhysics,true)
+		gethumanoid():SetStateEnabled(Enum.HumanoidStateType.Swimming,true)
+		gethumanoid():ChangeState(Enum.HumanoidStateType.RunningNoPhysics)
+	end)
+	
+	ac("respawn", "", "Makes you respawn", function()
+		character:ClearAllChildren()
+		notify("Respawning", "Your character is respawning", game.Players.RespawnTime, function()
+	
+		end, "Respawning in")
+	end)
+	
+	ac("reset", "", "Makes you commit suicide the Roblox way", function()
+		gethumanoid().Health = 0
+	end, {"suicide", "dietime"})
+	
+	ac("equiptools","Tool","Equips all of your tools", function()
+		for i,v in pairs(lp.Backpack:GetChildren()) do
+			if v:IsA("Tool") then
+				v.Parent = character
+			end
+		end
+	end)
+	
+	ac("equiptoolswithhandle","Tool","Equips all of your tools that has a handle", function()
+		for i,v in pairs(lp.Backpack:GetChildren()) do
+			if v:IsA("Tool") and v:FindFirstChild("Handle") then
+				v.Parent = character
+			end
+		end
+	end)
+	
+	local usingtools = false
+	
+	ac("usetools", "Tool, Speed (in seconds)", "Uses your currently equipped tool(s)", function(args)
+		runcmd("unusetools")
+		usingtools = true
+		while wait(args[2]) do
+			for i,v in pairs(character:GetChildren()) do
+				if v:IsA("Tool") then
+					v:Activate()
+				end
+			end
+		end
+	end)
+	
+	ac("unusetools", "", "Stops using tools", function()
+		usingtools = false
+	end)
+	
+	ac("attach", "Tool", "Attempts to make you attach to another player", function()
+		local humanoid = gethumanoid()
+		local humanoid2 = humanoid:Clone()
+		character.Animate.Disabled = true
+		humanoid:Destroy()
+		humanoid2.Parent = character
+		runcmd("equiptools")
+		character.Animate.Disabled = false
+	end)
+	
+	local bringing = {}
+	ac("clientbring", "Player", "Teleports a player to you [CLIENT]", function(args)
+		local name = getplayer(args[2]).name
+		if name and not table.find(bringing, name) then
+			bringing[#bringing+1] = name
+			while table.find(bringing, name) and game.Players:FindFirstChild(name) do
+				cbring(name)
+			end
+		end
+	end, {"cbring"})
+	
+	ac("kill", "Player, Tool", "Kills a player with your tools. You may have to run this twice", function(args)
+		local plr = game.Players.LocalPlayer
+	
+		local function godmode()
+			local char = game.Players.LocalPlayer.Character
+			local humanoid = char:WaitForChild("Humanoid")
+			local humanoid2 = humanoid:Clone()
+			char.Parent = nil
+			humanoid.Parent = nil
+			char.Parent = workspace
+			char.Parent = nil
+			humanoid2:Destroy()
+			humanoid.Parent = char
+			char.Parent = workspace
+		end
+	
+	
+	
+		local function equiptools()
+			local tools = {}
+			for i,v in pairs(plr.Backpack:GetChildren()) do
+				if v:IsA("Tool") and v:FindFirstChild("Handle") then
+					v.Parent = plr.Character
+					tools[#tools+1] = v
+				end
+			end
+			for i,v in pairs(plr.Character:GetChildren()) do
+				if v:IsA("Tool") and v:FindFirstChild("Handle") then
+					v.Parent = plr.Character
+					tools[#tools+1] = v
+				end
+			end
+			return tools, #tools
+		end
+	
+		local function to(player)
+			local finished = false
+			local tools = equiptools()
+			repeat
+				for i,v in pairs(tools) do
+					v.Handle.Position = player.Character.HumanoidRootPart.Position
+				end
+				if #tools == 0 or not character or not character:FindFirstChildWhichIsA("Tool") then
+					finished = true
+				end
+				miniwait()
+			until finished == true
+		end
+	
+		local function suicide()
+			plr.Character.Humanoid.Health = 0
+			plr.Character = nil
+		end
+	
+		local function kill(player)
+			if game.Players:FindFirstChild(player) and plr.Backpack:FindFirstChildWhichIsA("Tool") or plr.Character and plr.Character:FindFirstChildWhichIsA("Tool") then
+				local victim = game.Players[player]
+				godmode()
+				to(victim)
+				wait()
+				suicide()
+				local currenttime = tick()
+				repeat wait() until not victim or not victim.Character or not victim.Character:FindFirstChild("Humanoid") or victim.Character.Humanoid.Health <= 0 or tick() > currenttime + 1
+				if not victim then
+					notify(player.." left", "The player has left the game", 2)
+				elseif victim.Character and victim.Character:FindFirstChild"Humanoid" and victim.Character.Humanoid.Health <= 0 then
+					notify(player.." died", "Successfully murdered the player", 2)
+				elseif victim.Character and victim.Character:FindFirstChild"Humanoid" and victim.Character.Humanoid.Health > 0 then
+					notify("Failed to kill", "Failed to kill the player", 5, function()
+						runcmd("kill "..player)
+					end, "Try again")
+				else
+					notify(player.."'s character doesn't exist", "This is basically saying you tried to kill somebody dead", 4)
+				end
+			elseif not game.Players:FindFirstChild(player) then
+				notify("Player doesn't exist idiot", "This player isn't even a thing", 2)
+			elseif not plr.Character then
+				notify(player.."'s character doesn't even have a character, maybe you just killed them?", 3)
+			else
+				notify("You need a tool dumbass", "Get a tool", 2)
+			end
+		end
+		kill(getplayer(args[2]).name)
+	end)
+	
+	
+	
+	ac("unclientbring", "Player", "Attempts to stop the clientbring command", function(args)
+		local name = getplayer(args[2]).name
+		local pos = table.find(bringing, name)
+		if name and pos then
+			table.remove(bringing, pos)
+		end
+		if args[2]:lower() == "all" then
+			bringing = {}
+		end
+	end, {"uncbring"})
+	
+	ac("drophats", "Hats", "Drops your hats [You could be kicked for this]", function()
+		for i,v in pairs(character:GetChildren()) do
+			if v:IsA("Accessory") or v:IsA("Hat") then
+				v.Parent = workspace
+			end
+		end
+	end)
+	
+	local oldbrightness = game.Lighting.Brightness
+	ac("editbrightness", "Number", "Edits the lighting for the workspace", function(args)
+		game.Lighting.Brightness = args[2]
+	end)
+	
+	ac("uneditbrightness","", "Resets the lighting for the workspace", function()
+		game.Lighting.Brightness = oldbrightness
+	end)
+	
+	ac("naked", "Clothes", "Strips you naked", function()
+		for i,v in pairs(character:GetChildren()) do
+			if v:IsA("Shirt") or v:IsA("ShirtGraphic") or v:IsA("Pants") then
+				v:Destroy()
+			end
+		end
+	end, {"strip", "noclothes"})
+	
+	local noplatformstand = nil
+	local diedplatformstand = nil
+	ac("noplatformstand", "None", "Attempts to make your character never platformstand", function()
+		runcmd("unnoplatformstand|unplatformstand")
+	
+		local function PlatformStandcheck(thing)
+			if gethumanoid().PlatformStand then
+				gethumanoid().PlatformStand = false
+			end
+		end
+	
+		noplatformstand = gethumanoid():GetPropertyChangedSignal("PlatformStand"):Connect(PlatformStandcheck)
+		local function noplatformstanddiedlol()
+			repeat wait() until character ~= nil and gethumanoid()
+			noplatformstand:Disconnect()
+			noplatformstand = gethumanoid():GetPropertyChangedSignal("PlatformStand"):Connect(PlatformStandcheck)
+		end
+		diedplatformstand = lp.CharacterAdded:Connect(noplatformstanddiedlol)
+	end)
+	
+	ac("unnoplatformstand", "", "Attempts to disable the noplatformstand command", function()
+		if noplatformstand then
+			noplatformstand:Disconnect()
+		end
+		if diedplatformstand then
+			diedplatformstand:Disconnect()
+		end
+	end)
+	
+	ac("platformstand", "", "Makes you enter a ragdoll-like state", function()
+		gethumanoid().PlatformStand = true
+	end)
+	
+	ac("unplatformstand", "", "Attempts to reverse the platformstand command", function()
+		gethumanoid().PlatformStand = false
+	end)
+	
+	ac("addcommand", "", "Opens the add command GUI", function()
+		boundlessgrasp.CustomCommands.Visible = true
+	end, {"addcmd", "ac"})
+	
+	ac("chat", "String", "Says something in chat", function(args)
+		chat(table.concat(args," ", 2))
+	end)
+	
+	ac("viewhistory", "", "Shows the command history", function()
+		boundlessgrasp.History.Visible = true
+	end, "history")
+	
+	ac("getkey", "", "Testing for the get key function", function()
+		print(getkey())
+	end)
+	
+	ac("keybind", "Key, Command", "Binds a key to a command of your chosing", function(args)
+		addkeybind(getkey(), function()
+			runcmd(table.concat(args," ", 2))
+		end)
+	end, "bindkey")
+	
+	ac("removekeybind", "Key", "Removes a keybind", function()
+		removekeybind(getkey())
+	end)
+	
+	spawnpointfunct = nil
+	
+	ac("setspawnpoint", "", "Sets your spawnpoint to this location you're at", function()
+		runcmd("removespawnpoint")
+		local pos = getroot().CFrame
+		spawnpointfunct = lp.CharacterAdded:Connect(function()
+			repeat miniwait() until getroot()
+			getroot().CFrame = pos
+		end)
+	end)
+	
+	ac("removespawnpoint", "", "Removes the current spawnpoint", function()
+		if spawnpointfunct then
+			spawnpointfunct:Disconnect()
+		end
+	end)
+	
+	respawndeath= nil
+	ac("respawnatdeathlocation", "", "Respawns you to the area where you previously died", function()
+		gethumanoid().Died:Connect(function()
+			pcall(function()
+				runcmd("setspawnpoint")
+			end)
+		end)
+		respawndeath = lp.CharacterAdded:Connect(function()
+			repeat miniwait() until gethumanoid()
+			gethumanoid().Died:Connect(function()
+				pcall(function()
+					runcmd("setspawnpoint")
+				end)
+			end)
+		end)
+	end)
+	
+	close()
+	boundlessgrasp.CustomCommands.Add.MouseButton1Click:Connect(function()
+		local title = boundlessgrasp.CustomCommands.name.Text:gsub(" ","")
+		local desc = boundlessgrasp.CustomCommands.Desc.Text
+		local req = boundlessgrasp.CustomCommands.Req.Text
+		local scripting = boundlessgrasp.CustomCommands.Scripting.Text
+		local alias = boundlessgrasp.CustomCommands.Alias.Text:gsub(" ",""):split(",")
+		local extra1 = ""
+		local endtra1 = ""
+		if boundlessgrasp.CustomCommands.GameOnly.Text == "This game only [X]" then
+			extra1 = "if game.PlaceId == ".. game.PlaceId.." then\n"
+			endtra1 = "\nend"
+		end
+		local scriptie = extra1.."local table = {\n\tac('"..title.."', '"..req.."', '"..desc.."', function()\n\t\t"..scripting.."\n\tend,\n\t{'"..table.concat(alias,"', '").."'})\n}\nreturn table"..endtra1
+		if debugmode then
+			print(scriptie)
+		end
+		if writefile and isfolder and makefolder and listfiles and readfile then
+			if isfolder("boundlessgrasp") then
+				writefile("boundlessgrasp/"..title..".bgs", scriptie)
+			else
+				makefolder("boundlessgrasp")
+				writefile("boundlessgrasp/"..title..".bgs", scriptie)
+			end
+			if runservice:IsStudio() == false then
+				loadstring(readfile("boundlessgrasp/"..title..".bgs"))()
+			end
+		end
+	end)
+	
+	boundlessgrasp.CustomCommands.GameOnly.MouseButton1Click:Connect(function()
+		if boundlessgrasp.CustomCommands.GameOnly.Text == "This game only [ ]" then
+			boundlessgrasp.CustomCommands.GameOnly.Text = "This game only [X]"
+		else
+			boundlessgrasp.CustomCommands.GameOnly.Text = "This game only [ ]"
+		end
+	end)
+	
+	if writefile and isfolder and makefolder and listfiles and readfile then
+		if isfolder("boundlessgrasp") then
+			for i,v in pairs(listfiles("boundlessgrasp")) do
+				loadstring(readfile(v))()
+			end
+		end
+	end
+	
+	notify("Loaded", "Loaded "..#cmdlabels.." commands!", 5)
+end
+coroutine.wrap(DAYVOJ_fake_script)()
+-- BoundlessGrasp.Notes is disabled.
+local function NYYIQ_fake_script() -- X.LocalScript 
+	local script = Instance.new('LocalScript', X)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(NYYIQ_fake_script)()
+local function SUTOT_fake_script() -- X_2.LocalScript 
+	local script = Instance.new('LocalScript', X_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(SUTOT_fake_script)()
