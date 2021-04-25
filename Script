@@ -1694,7 +1694,7 @@ local function ANVYH_fake_script() -- BoundlessGrasp.MainScript
 		local extra1 = ""
 		local endtra1 = ""
 		if boundlessgrasp.CustomCommands.GameOnly.Text == "This game only [X]" then
-			extra1 = "if game.PlaceId == ".. game.PlaceId.." then\n"
+			extra1 = "if game.GameId == ".. game.GameId.." then\n"
 			endtra1 = "\nend"
 		end
 		local scriptie = extra1.."local table = {\n\tac('"..title.."', '"..req.."', '"..desc.."', function(args)\n\t\t"..scripting.."\n\tend,\n\t{'"..table.concat(alias,"', '").."'})\n}\nreturn table"..endtra1
