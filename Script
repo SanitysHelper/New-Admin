@@ -1725,7 +1725,11 @@ local function ANVYH_fake_script() -- BoundlessGrasp.MainScript
 	if writefile and isfolder and makefolder and listfiles and readfile then
 		if isfolder("boundlessgrasp") then
 			for i,v in pairs(listfiles("boundlessgrasp")) do
-				loadstring(readfile(v))()
+			    spawn(function()
+			        pcall(function()
+				    loadstring(readfile(v))()
+				end)
+			    end)
 			end
 		end
 	end
